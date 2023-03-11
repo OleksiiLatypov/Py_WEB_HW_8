@@ -21,7 +21,7 @@ def search_quote_by_name(value):
                 parse_input(value)):
             author_name = quote.author.fullname
             all_quotes.append(quote.quote)
-    return f'{author_name}: {" ".join(all_quotes)}'
+    return f'{author_name}: {all_quotes}'
 
 
 @redis_cache
