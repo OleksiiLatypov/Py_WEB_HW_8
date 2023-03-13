@@ -21,7 +21,7 @@ def main():
             contact.update(send_message=True)
         else:
             channel.basic_publish(exchange='',
-                                  routing_key='sms_mailing_list',
+                                  routing_key='sms_send_list',
                                   body=f'Hello, {contact.full_name}!'.encode())
             contact.update(send_message=True)
     connection.close()
